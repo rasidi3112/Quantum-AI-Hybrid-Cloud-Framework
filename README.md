@@ -34,7 +34,7 @@ source .venv/bin/activate   # macOS/Linux
 pip install -r requirements.txt
 
 # Optional: verify installation
-pytest tests/
+pytest
 
 ```
 
