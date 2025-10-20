@@ -145,6 +145,22 @@ Streamlit Dashboard:
 streamlit run deployment/dashboard.py
 
 ```
+### Dashboard Screenshots
+
+**Quantum-AI Hybrid Dashboard – Overview**
+![Dashboard Screenshot 1](assets/dashboard_overview1.png)  
+*Shows real-time training metrics and accuracy/loss curves. On macOS Apple Silicon, the dashboard runs optimally using MPS device.*
+
+![Dashboard Screenshot 2](assets/dashboard_overview2.png)  
+*Additional metrics visualization and training logs. MPS on Apple Silicon ensures GPU-like performance.*
+
+**Inference Playground**
+![Inference Playground](assets/inference_playground.png)  
+*Interactive input for predictions using the hybrid model. Predictions are computed on MPS for Apple Silicon.*
+
+**Bloch Sphere Visualizer**
+![Bloch Sphere](assets/bloch_sphere.png)  
+*Visualizing quantum states on the Bloch sphere. MPS device provides accelerated computation on Apple M1/M2.*
 
 This dashboard provides:
 - Real-time training metrics visualization.
