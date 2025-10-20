@@ -128,18 +128,24 @@ python -m qml_app.main serve \
   "samples": [[5.1, 3.5, 1.4, 0.2]]
 }
 ```
-   Response:
-    ```bash
+
+   Response:  
+   ```
     {
-  "predictions": [0],
+"predictions": [0],
   "probabilities": [[0.95, 0.03, 0.02]],
   "backend": "default.qubit"
 }
+
 ```
+
 Streamlit Dashboard:
+
  ```bash
 streamlit run deployment/dashboard.py
+
 ```
+
 This dashboard provides:
 - Real-time training metrics visualization.
 - Quantum state plots (Bloch Sphere).
