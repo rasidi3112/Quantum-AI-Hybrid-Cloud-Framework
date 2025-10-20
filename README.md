@@ -1,4 +1,3 @@
-## My project is still under development☺️
 
 # Quantum-AI Hybrid Cloud Framework
 
