@@ -85,7 +85,16 @@ Output:
 - runs/<experiment_name>/checkpoints/best.pt
 - runs/<experiment_name>/metrics.json
 - Training plots (loss, accuracy)
-  
+
+ ### Training Metrics Visualization
+
+After running the training command, the framework automatically generates `training_metrics.html` under the `runs/<experiment_name>/` directory.  
+This file provides a real-time visualization of loss and accuracy curves during training.
+
+Example output:
+
+![Training Metrics Screenshot](assets/training_metrics.png)
+
 To train on a QPU:
 ```bash
 python -m qml_app.main train \
