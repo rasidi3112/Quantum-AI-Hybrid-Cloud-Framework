@@ -1,19 +1,34 @@
 
 # Quantum-AI Hybrid Cloud Framework
 
-Quantum-AI Hybrid Cloud Framework is an advanced modular platform for hybrid classical–quantum AI model development, training, and deployment. It integrates PyTorch for classical neural networks and PennyLane/Qiskit for quantum layers, with support for both local simulators and cloud-based QPUs from IBM, Rigetti, and D-Wave. The framework is fully cross-platform (macOS, Linux, Windows) and designed for reproducible international research and enterprise applications.
+**Quantum-AI Hybrid Cloud Framework** is an advanced modular platform for **hybrid classical–quantum AI** model development, training, and deployment. It integrates **PyTorch** for classical neural networks and **PennyLane/Qiskit** for quantum layers, supporting both **local simulators** and **cloud QPUs** (IBM, Rigetti, D-Wave). Fully **cross-platform** (macOS, Linux, Windows), designed for reproducible research and enterprise applications.
 
----
+## Key Features
 
-## Features
+- **Hybrid Modeling**  
+  Combine classical neural networks with variational quantum circuits in a modular architecture.
 
-- **Hybrid Modeling**: Combine classical neural networks with variational quantum circuits.
-- **Cross-Device Compatibility**: Fully portable across laptops, CPUs, GPUs, and QPUs.
-- **Backend Auto-Detection**: Automatically switches between CPU, MPS (macOS), CUDA, or QPU.
-- **Configurable Pipelines**: Modular configuration via YAML or CLI.
-- **Integrated Logging & Checkpointing**: Automatic saving of models, metrics, and artifacts.
-- **Cloud-Ready Deployment**: FastAPI endpoints and Streamlit dashboards.
-- **Continuous Integration Support**: Preconfigured for GitHub Actions, Docker, and testing.
+- **Cross-Device Compatibility**  
+  Fully portable across laptops, CPUs, GPUs, and cloud QPUs for flexible development and deployment.
+
+- **Backend Auto-Detection**  
+  Automatically switches between CPU, MPS (macOS), CUDA, or QPU depending on available hardware.
+
+- **Configurable Pipelines**  
+  Modular configuration via **YAML** or **CLI** for easy experimentation and adaptation.
+
+- **Integrated Logging & Checkpointing**  
+  Automatically saves models, metrics, and artifacts to ensure reproducibility.
+
+- **Cloud-Ready Deployment**  
+  FastAPI endpoints and Streamlit dashboards ready for inference and monitoring.
+
+- **Continuous Integration Support**  
+  Preconfigured for GitHub Actions, Docker, and testing workflows for professional development.
+
+## Purpose
+
+Provide a **professional, reproducible hybrid AI ecosystem** ready for integration in **global research or industry projects**, bridging **quantum computing** with **classical deep learning**.
 
 ---
 
