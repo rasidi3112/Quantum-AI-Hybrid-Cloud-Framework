@@ -145,22 +145,22 @@ Streamlit Dashboard:
 streamlit run deployment/dashboard.py
 
 ```
-### Dashboard Screenshots
+#### Dashboard Screenshots
 
-**Quantum-AI Hybrid Dashboard – Overview**
-![Dashboard Screenshot 1](assets/dashboard_overview1.png)  
-*Shows real-time training metrics and accuracy/loss curves. On macOS Apple Silicon, the dashboard runs optimally using MPS device.*
+**1. Overview: Training Metrics**
+![Dashboard Overview 1](assets/dashboard_overview1.png)  
+*Real-time visualization of training metrics (loss & accuracy) across epochs. On Mac Apple Silicon, the MPS device is automatically used if selected.*
 
-![Dashboard Screenshot 2](assets/dashboard_overview2.png)  
-*Additional metrics visualization and training logs. MPS on Apple Silicon ensures GPU-like performance.*
+![Dashboard Overview 2](assets/dashboard_overview2.png)  
+*Detailed metrics and logs. Device selection (CPU/MPS/CUDA) ensures consistent cross-platform performance.*
 
-**Inference Playground**
+**2. Inference Playground**
 ![Inference Playground](assets/inference_playground.png)  
-*Interactive input for predictions using the hybrid model. Predictions are computed on MPS for Apple Silicon.*
+*Interactive input interface for predictions. Choose device according to your hardware for optimal inference speed.*
 
-**Bloch Sphere Visualizer**
+**3. Bloch Sphere Visualizer**
 ![Bloch Sphere](assets/bloch_sphere.png)  
-*Visualizing quantum states on the Bloch sphere. MPS device provides accelerated computation on Apple M1/M2.*
+*Quantum state visualization using a Bloch Sphere. Accelerated on MPS (Apple Silicon) or CUDA (NVIDIA GPU).*
 
 This dashboard provides:
 - Real-time training metrics visualization.
@@ -199,15 +199,16 @@ The Docker image ensures consistent runtime environments across machines.
  ## 9. Directory Structure
  ```bash
 Quantum-AI-Hybrid-Cloud-Framework/
-├─ config/                # YAML configs for models and backends
-├─ deployment/            # FastAPI + Streamlit deployment scripts
-├─ examples/              # Datasets and notebooks
-├─ models/                # Hybrid and quantum model definitions
-├─ training/              # Training pipelines
-├─ utils/                 # Logging, checkpointing, and device utilities
-├─ tests/                 # Unit and integration tests
-├─ runs/                  # Experiment outputs
-└─ requirements.txt
+├─ .github/workflows/   # CI/CD pipelines: automated testing, linting, Docker build
+├─ deployment/          # FastAPI services and Streamlit dashboard scripts
+├─ examples/            # Sample datasets, notebooks, and usage examples
+├─ models/              # Hybrid and quantum model definitions (PyTorch + PennyLane/Qiskit)
+├─ training/            # Training pipeline scripts and utilities
+├─ utils/               # Logging, checkpointing, device utilities, and helper functions
+├─ tests/               # Unit and integration tests for reproducibility
+├─ runs/                # Experiment outputs: checkpoints, metrics, and visualizations
+└─ requirements.txt     # Python dependencies for reproducible environment
+
 ```
  ## 10. Cloud Integration
 To connect to a cloud quantum provider, export your credentials:
