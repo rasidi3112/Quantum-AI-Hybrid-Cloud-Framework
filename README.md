@@ -82,7 +82,7 @@ If you want to use the same project on another machine:
 
 6. Confirm reproducibility:
    ```bash
-   python -m qml_app.main evaluate --model vqc --config config/default.yaml
+   python training/train_hybrid.py --model vqc --config config/default.yaml
 ``
 
 ## 3. Quick Start Training
