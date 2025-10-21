@@ -60,6 +60,22 @@ Features
 
 2. QuantumLayer (quantum_layers.py)  
    A. differentiable quantum circuit implemented as a native PyTorch layer using PennyLane.
+   Configuration (QuantumLayerConfig)
+```bash
+   @dataclass(frozen=True)
+class QuantumLayerConfig:
+    n_qubits: int          # Number of qubits (must match classical output)
+    n_layers: int = 2      # Depth of StronglyEntanglingLayers
+    backend: str = "default.qubit"  # e.g., "ibmq_qasm_simulator"
+    shots: int | None = 1024        # Sampling shots (None = analytic)
+    use_mps: bool = True   # Optimized for Apple Silicon 
+   ```
+Circuit Design  
+
+- Feature Encoding: AngleEmbedding (Y-rotation)  
+- Ansatz: StronglyEntanglingLayers (hardware-efficient)  
+- Measurement: Expectation values of PauliZ on all qubits  
+- Interface: torch (enables end-to-end gradient flow)  
 
 
 
