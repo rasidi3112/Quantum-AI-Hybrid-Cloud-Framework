@@ -94,7 +94,26 @@ deployment/
         -  Bloch Sphere for single-qubit state representation  
         -  Interactive sliders for θ (theta) and φ (phi)  
         -  Built with Plotly for high-fidelity rendering  
-            
+
+     *💡 Tip: Works seamlessly on Apple Silicon  via MPS acceleration.*
+
+##   Quick Start
+Prerequisites
+
+- Python ≥ 3.11
+- Trained model checkpoint (e.g., runs/*/checkpoints/best.pt)
+- requirements.txt installed
+
+  Launch API
+  ```bash
+  python -m deployment.api --model-path runs/your_run/checkpoints/best.pt --device cpu
+   ```
+  Launch Dashboard
+  ```bash
+  streamlit run deployment/dashboard.py
+     ```
+  streamlit run deployment/dashboard.py
+
   
     
 
