@@ -39,7 +39,31 @@ models/
 *💡 Note: classical_model_stub.py is only used for unit testing and is not part of the public API.*
 
 ## Core Components 
+1. ClassicalFeatureExtractor (classical_model.py)  
+   A. configurable multi-layer perceptron (MLP) for classical feature encoding.  
+       Configuration (ClassicalModelConfig)
+   
+```bash
+ @dataclass(frozen=True)
+class ClassicalModelConfig:
+    input_dim: int
+    hidden_dims: Tuple[int, ...]  # e.g., (64, 32, 16)
+    activation: str = "relu"      # relu, gelu, tanh
+    dropout: float = 0.1
+```
 
+Features
+
+- Supports arbitrary depth and width
+- LayerNorm + Dropout for regularization
+- Fully compatible with torch.nn.Module
+
+2. QuantumLayer (quantum_layers.py)  
+   A. differentiable quantum circuit implemented as a native PyTorch layer using PennyLane.
+
+
+
+     
 
 
 
