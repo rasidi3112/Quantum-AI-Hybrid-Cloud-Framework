@@ -179,8 +179,8 @@ Models in this module support:
  - Stub implementations (classical_model_stub.py) enable fast CI testing without full model load
  - Validated on macOS (M1), Linux (CUDA), and Windows (CPU)
 
-##  License  
-Distributed under the MIT License. See LICENSE for details.  
+## License  
+Distributed under the [MIT License](./LICENSE). See the [`LICENSE`](./LICENSE) file in the root directory for details.   
 
 ## Acknowledgements  
 
@@ -191,6 +191,8 @@ This module leverages:
 - Qiskit (optional) for IBM QPU integration
 
 Designed for international quantum AI research and enterprise-ready hybrid modeling.  
+
+---
 
 Part of the [Quantum-AI Hybrid Cloud Framework](https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework)  
 GitHub Repository | Author: [Ahmad Rasidi](https://github.com/rasidi3112)
