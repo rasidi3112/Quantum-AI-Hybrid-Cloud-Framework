@@ -18,3 +18,5 @@ ruff>=0.1.7
 typer>=0.9
 python-dotenv>=1.0
 requests>=2.31
+notebook>=6.5
+jupyterlab>=4.0
