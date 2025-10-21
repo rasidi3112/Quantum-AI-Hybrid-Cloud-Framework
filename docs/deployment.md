@@ -112,7 +112,22 @@ Prerequisites
   ```bash
   streamlit run deployment/dashboard.py
      ```
-  streamlit run deployment/dashboard.py
+     Then open http://localhost:8501
+
+  ##  Cloud & Enterprise Readiness
+
+| Feature | Supported |
+|----------|------------|
+| Docker containerization | ✅ (Dockerfile in root) |
+| Kubernetes deployment | ✅ (via FastAPI + Uvicorn) |
+| API authentication | 🔜 (Planned via middleware) |
+| Model versioning | ✅ (via checkpoint + config) |
+| Cross-platform | ✅ (Windows, Linux, macOS) |
+| QPU credential injection | ✅ (`QAI_IBM_TOKEN`, etc.) |
+
+
+
+ 
 
   
     
