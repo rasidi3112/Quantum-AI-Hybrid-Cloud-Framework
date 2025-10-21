@@ -118,18 +118,30 @@ Prerequisites
 
 | Feature | Supported |
 |----------|------------|
-| Docker containerization | ✅ (Dockerfile in root) |
-| Kubernetes deployment | ✅ (via FastAPI + Uvicorn) |
-| API authentication | 🔜 (Planned via middleware) |
-| Model versioning | ✅ (via checkpoint + config) |
-| Cross-platform | ✅ (Windows, Linux, macOS) |
-| QPU credential injection | ✅ (`QAI_IBM_TOKEN`, etc.) |
+| Docker containerization |  (Dockerfile in root) |
+| Kubernetes deployment |  (via FastAPI + Uvicorn) |
+| API authentication |  (Planned via middleware) |
+| Model versioning |  (via checkpoint + config) |
+| Cross-platform |  (Windows, Linux, macOS) |
+| QPU credential injection |  (`QAI_IBM_TOKEN`, etc.) |
 
+---
 
+License
+  Distributed under the [MIT License](LICENSE). See `LICENSE` for details.   
 
- 
+---
 
-  
+Acknowledgements  
+
+This module integrates:
+
+- FastAPI for high-performance APIs  
+- Streamlit for rapid dashboard prototyping  
+- PennyLane + Qiskit for quantum backend abstraction  
+- PyTorch for classical-quantum hybrid execution  
+ Designed for international research collaboration and quantum-ready enterprise AI.
+
     
 
    
