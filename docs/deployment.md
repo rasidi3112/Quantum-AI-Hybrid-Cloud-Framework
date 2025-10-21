@@ -143,7 +143,7 @@ This module integrates:
  Designed for international research collaboration and quantum-ready enterprise AI.   
 ---
 Part of the [Quantum-AI Hybrid Cloud Framework](https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework)  
-GitHub Repository | Author: [Ahmad Rasidi](https://github.com/rasidi3112)
+GitHub Repository | Author: [Ahmad Rasidi](https://github.com/rasidi3112) 
 
 
 
