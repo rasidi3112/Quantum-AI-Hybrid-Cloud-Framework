@@ -127,12 +127,12 @@ Prerequisites
 
 ---
 
-License
+## License  
   Distributed under the [MIT License](LICENSE). See `LICENSE` for details.   
 
 ---
 
-Acknowledgements  
+## Acknowledgements  
 
 This module integrates:
 
@@ -140,7 +140,12 @@ This module integrates:
 - Streamlit for rapid dashboard prototyping  
 - PennyLane + Qiskit for quantum backend abstraction  
 - PyTorch for classical-quantum hybrid execution  
- Designed for international research collaboration and quantum-ready enterprise AI.
+ Designed for international research collaboration and quantum-ready enterprise AI.   
+---
+Part of the [Quantum-AI Hybrid Cloud Framework](https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework)  
+GitHub Repository | Author: [Ahmad Rasidi](https://github.com/rasidi3112)
+
+
 
     
 
