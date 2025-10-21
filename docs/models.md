@@ -8,7 +8,7 @@ Modular, Reproducible, and Hardware-Aware Hybrid Quantum-Classical Architectures
 ![PennyLane](https://img.shields.io/badge/PennyLane-Quantum-orange.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-red.svg)
 
-
+ 
 ---
 
 ## Overview  
