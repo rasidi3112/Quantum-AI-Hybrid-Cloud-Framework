@@ -124,7 +124,17 @@ Acknowledgements
 - PennyLane: For differentiable quantum programming  
 - Plotly: For interactive 3D quantum visualizations
   
- Designed to lower the barrier to entry for international quantum AI research.
+ Designed to lower the barrier to entry for international quantum AI research.  
+
+ ---
+
+
+Part of the [Quantum-AI Hybrid Cloud Framework](https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework)  
+GitHub Repository | Author: [Ahmad Rasidi](https://github.com/rasidi3112)
+
+
+
+
 
 
 
