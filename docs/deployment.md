@@ -69,6 +69,16 @@ deployment/
 }
 ```
 
+   Example Response  
+
+```json
+    {
+  "predictions": [0],
+  "probabilities": [[0.95, 0.03, 0.02]],
+  "backend": "default.qubit"
+}
+```
+  
 
    
     
