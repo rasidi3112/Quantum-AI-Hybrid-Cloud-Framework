@@ -114,7 +114,7 @@ Prerequisites
      ```
      Then open http://localhost:8501
 
-  ##  Cloud & Enterprise Readiness
+ ## Cloud & Enterprise Readiness
 
 | Feature | Supported |
 |----------|------------|
