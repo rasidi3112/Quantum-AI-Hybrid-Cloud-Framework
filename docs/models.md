@@ -75,7 +75,58 @@ Circuit Design
 - Feature Encoding: AngleEmbedding (Y-rotation)  
 - Ansatz: StronglyEntanglingLayers (hardware-efficient)  
 - Measurement: Expectation values of PauliZ on all qubits  
-- Interface: torch (enables end-to-end gradient flow)  
+- Interface: torch (enables end-to-end gradient flow)
+
+---
+
+  Hardware Support
+  
+
+| Backend Type | Example | Execution Mode |
+|---------------|----------|----------------|
+| Local Simulator | `default.qubit` | Deterministic / Stochastic |
+| Cloud QPU (IBM) | `ibmq_manila` | Stochastic (shots) |
+| Cloud QPU (Rigetti) | `rigetti_aspen-m-3` | Stochastic |
+| Cloud QPU (D-Wave) | via hybrid solvers | Specialized |  
+
+*Auto-fallback: If cloud credentials are missing, defaults to local simulator.*
+
+---   
+3. HybridClassifier (hybrid_model.py)  
+   An end-to-end hybrid model that fuses classical and quantum processing.
+   
+Architecture  :  
+```bash  
+    Input → [Classical MLP] → [Quantum Circuit] → [Skip Connection] → [Post-Quantum Head] → Logits
+```   
+   Configuration (HybridModelConfig)  
+```bash   @dataclass(frozen=True)
+class HybridModelConfig:
+    classical: ClassicalModelConfig
+    quantum: QuantumLayerConfig
+    n_classes: int
+    post_quantum_dim: Optional[int] = None  # e.g., 32
+    use_skip_connection: bool = True        # Residual fusion
+```
+Key Features  
+
+- Dimensional Consistency Check: Ensures classical.output_dim == quantum.n_qubits  
+- Skip Connection: Fuses classical and quantum features for richer representations  
+- Post-Quantum Head: MLP with LayerNorm, GELU, and Dropout for robust classification  
+- Inference Methods:
+     - forward(x) → logits  
+     - predict_proba(x) → softmax probabilities  
+     - predict(x) → class labels  
+
+
+  
+   
+
+   
+   
+   
+
+
 
 
 
