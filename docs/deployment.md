@@ -77,8 +77,26 @@ deployment/
   "probabilities": [[0.95, 0.03, 0.02]],
   "backend": "default.qubit"
 }
-```
+``` 
+
+3. Streamlit Dashboard (dashboard.py)  
+   An interactive dashboard for researchers and ML engineers featuring:  
+     Training Metrics  
+        -  Real-time loss & accuracy curves (loaded from metrics.json)  
+        -  Epoch-wise comparison (train vs. validation)  
   
+     Inference Playground  
+        -  Input sample via text field 
+        -  Live prediction with probability breakdown  
+        -  Device selector (CPU / CUDA / MPS)  
+   
+    Quantum State Visualizer  
+        -  Bloch Sphere for single-qubit state representation  
+        -  Interactive sliders for θ (theta) and φ (phi)  
+        -  Built with Plotly for high-fidelity rendering  
+            
+  
+    
 
    
     
