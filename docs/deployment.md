@@ -46,7 +46,6 @@ deployment/
 | `/Q/predict`    | `POST` | Accepts `[[features]]`, returns predictions + probabilities |  
 
   Security & Reliability  
-  
      - Model loading at startup (503 if not ready)  
      - Type-safe request/response (Pydantic)  
      - Structured logging (utils/logging_utils)  
@@ -61,6 +60,15 @@ deployment/
         --host 0.0.0.0 \
         --port 8000
   ```
+   ---
+   Example request 
+
+```json
+{
+  "samples": [[5.1, 3.5, 1.4, 0.2]]
+}
+```
+
 
    
     
