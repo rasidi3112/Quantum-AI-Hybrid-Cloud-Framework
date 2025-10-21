@@ -190,7 +190,12 @@ This module leverages:
 - PyTorch for classical deep learning  
 - Qiskit (optional) for IBM QPU integration
 
-Designed for international quantum AI research and enterprise-ready hybrid modeling.
+Designed for international quantum AI research and enterprise-ready hybrid modeling.  
+
+Part of the [Quantum-AI Hybrid Cloud Framework](https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework)  
+GitHub Repository | Author: [Ahmad Rasidi](https://github.com/rasidi3112)
+
+
 
 
 
