@@ -154,6 +154,49 @@ logits = model(x)
 probs = model.predict_proba(x)
 preds = model.predict(x)
 ```
+---
+
+## Integration & Export  
+
+Models in this module support:  
+
+- TorchScript export: torch.jit.script(model)  
+- ONNX export: via qml_app.export CLI  
+- FastAPI deployment: via deployment/inference.py  
+- Streamlit dashboard: real-time inference & visualization
+
+ All models are device-agnostic and automatically adapt to:  
+
+- cpu (universal)  
+- mps (Apple Silicon)  
+- cuda (NVIDIA GPU)
+
+  ---
+
+ ## Testing & Validation  
+
+ - Unit tests cover shape consistency, gradient flow, and backend compatibility
+ - Stub implementations (classical_model_stub.py) enable fast CI testing without full model load
+ - Validated on macOS (M1), Linux (CUDA), and Windows (CPU)
+
+##  License  
+Distributed under the MIT License. See LICENSE for details.  
+
+## Acknowledgements  
+
+This module leverages:  
+
+- PennyLane for quantum differentiable programming  
+- PyTorch for classical deep learning  
+- Qiskit (optional) for IBM QPU integration
+
+Designed for international quantum AI research and enterprise-ready hybrid modeling.
+
+
+
+  
+
+
 
 
 
