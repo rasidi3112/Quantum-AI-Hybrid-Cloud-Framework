@@ -42,8 +42,8 @@ deployment/
 
 | ENDPOINT        | METHOD | DESCRIPTION |
 |-----------------|---------|-------------|
-| `/Q/health`     | `GET`  | Returns service status and active quantum backend |
-| `/Q/predict`    | `POST` | Accepts `[[features]]`, returns predictions + probabilities |  
+| `/health`     | `GET`  | Returns service status and active quantum backend |
+| `/predict`    | `POST` | Accepts `[[features]]`, returns predictions + probabilities |  
 
   Security & Reliability  
      - Model loading at startup (503 if not ready)  
