@@ -83,7 +83,56 @@ python -m qml_app.main train \
     --device mps \
     --epochs 50
 ```
-*The framework automatically infers input_dim=4 and n_classes=3 from this file.*
+*The framework automatically infers input_dim=4 and n_classes=3 from this file.*  
+
+---
+
+Integration with the Full Framework  
+
+| Example                        | Connects To                                      |
+|--------------------------------|-------------------------------------------------|
+| quantum_bloch_demo.ipynb        | models/quantum_layers.py (same circuit design) |
+| iris.csv                        | training/, deployment/, evaluation/ pipelines  |  
+
+You can:
+
+- Train a hybrid model on iris.csv  
+- Export it to TorchScript (qml_app.export)  
+- Serve it via FastAPI (deployment/api.py)  
+- Visualize inference in the Streamlit dashboard (deployment/dashboard.py)
+
+---
+
+## Educational Use Cases
+
+This module is ideal for:
+
+- University courses in quantum computing or AI
+- Workshops on hybrid quantum-classical modeling
+- Onboarding new team members to the framework
+- Prototyping new quantum ansätze or feature maps
+
+## License
+
+All examples are distributed under the MIT License. The iris.csv dataset is in the public domain.  
+
+---
+
+Acknowledgements
+
+- Iris dataset: Originally published by R. A. Fisher (1936)  
+- PennyLane: For differentiable quantum programming  
+- Plotly: For interactive 3D quantum visualizations
+  
+ Designed to lower the barrier to entry for international quantum AI research.
+
+
+
+
+
+
+
+
 
 
 
