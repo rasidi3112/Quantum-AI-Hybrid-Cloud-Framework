@@ -48,6 +48,48 @@ examples/
   - Bloch vector computation from complex amplitudes  
   - 3D interactive visualization using Plotly
 
+    How to run :
+```bash
+    jupyter notebook examples/notebooks/quantum_bloch_demo.ipynb
+```
+ *Tip: Modify theta and phi to explore how gate angles affect qubit orientation. This notebook is ideal for teaching quantum state geometry or debugging quantum layers*  
+
+ 2. iris.csv — Benchmark Classification Dataset
+    
+     Dataset Summary
+
+| Feature  | Value                             |
+|----------|----------------------------------|
+| Samples  | 150                              |
+| Features | 4 (sepal/petal dimensions)       |
+| Classes  | 3 (setosa, versicolor, virginica)|
+| Format   | CSV (comma-separated)            |
+| License  | Public Domain                    |
+
+Why Iris?
+
+- Standard baseline in classical and quantum ML literature  
+- Small size → ideal for simulator-based QML experiments  
+- Balanced classes → fair evaluation of hybrid classifiers  
+
+---
+
+Usage in Training  
+```bash
+python -m qml_app.main train \
+    --model hybrid \
+    --dataset examples/iris.csv \
+    --backend default.qubit \
+    --device mps \
+    --epochs 50
+```
+*The framework automatically infers input_dim=4 and n_classes=3 from this file.*
+
+
+
+
+
+ 
     
 
 
