@@ -24,5 +24,23 @@ All components are:
 - Type-safe (using dataclass and type hints)  
 - Hardware-aware (auto-adapts to CPU, MPS, CUDA, or QPU backends)  
 - Reproducible (config-driven, seed-controlled)  
-- Interoperable (compatible with PyTorch ecosystem, ONNX, TorchScript)  
+- Interoperable (compatible with PyTorch ecosystem, ONNX, TorchScript)
+
+This module is the foundation for training, exporting, and deploying hybrid quantum-classical models in research and enterprise settings.  
+## Module Structure  
+```bash
+models/
+├── __init__.py                  # Public API exports
+├── classical_model.py           # Classical MLP encoder
+├── quantum_layers.py            # PennyLane-based quantum circuit layer
+├── hybrid_model.py              # End-to-end hybrid classifier
+└── classical_model_stub.py      # Pytest-compatible stub (internal use)
+```
+*💡 Note: classical_model_stub.py is only used for unit testing and is not part of the public API.*
+
+## Core Components 
+
+
+
+
 
