@@ -87,7 +87,7 @@ If you want to use the same project on another machine:
 
 ## 3. Quick Start Training
  ```bash
-   python -m qml_app.main train \
+   python training/train_hybrid.py \
        --model vqc \
        --dataset examples/iris.csv \
        --backend default.qubit \
