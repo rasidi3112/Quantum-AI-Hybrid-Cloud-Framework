@@ -116,7 +116,45 @@ Key Features
 - Inference Methods:
      - forward(x) → logits  
      - predict_proba(x) → softmax probabilities  
-     - predict(x) → class labels  
+     - predict(x) → class labels
+ 
+Usage Example  
+```bash
+from models import HybridClassifier, HybridModelConfig
+from models import ClassicalModelConfig, QuantumLayerConfig
+
+# Define configuration
+classical_cfg = ClassicalModelConfig(
+    input_dim=4,
+    hidden_dims=(16, 8),
+    activation="gelu",
+    dropout=0.1
+)
+
+quantum_cfg = QuantumLayerConfig(
+    n_qubits=8,
+    n_layers=3,
+    backend="default.qubit",
+    shots=1024
+)
+
+hybrid_cfg = HybridModelConfig(
+    classical=classical_cfg,
+    quantum=quantum_cfg,
+    n_classes=3,
+    use_skip_connection=True
+)
+
+# Instantiate model
+model = HybridClassifier(hybrid_cfg)
+
+# Forward pass
+x = torch.randn(5, 4)  # batch_size=5, features=4
+logits = model(x)
+probs = model.predict_proba(x)
+preds = model.predict(x)
+```
+
 
 
   
