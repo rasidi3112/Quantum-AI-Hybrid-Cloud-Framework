@@ -128,7 +128,7 @@ Prerequisites
 ---
 
 ## License  
-  Distributed under the [MIT License](LICENSE). See `LICENSE` for details.   
+Distributed under the [MIT License](./LICENSE). See the [`LICENSE`](./LICENSE) file in the root directory for details.
 
 ---
 
