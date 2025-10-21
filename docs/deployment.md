@@ -38,10 +38,12 @@ deployment/
 2. FastAPI REST Service (api.py)
 
      A. Production-ready inference API with:
-   | ENDPOINT                  | METHOD       | DESCRIPTION                             |
-|----------------------------|-----------------------|----------------------------------|
-| Q/health           | GET           | Returns service status and active quantum backend   |
-| Q/predict        | POST     | Quantum kernel computation       |
+       
+
+| ENDPOINT        | METHOD | DESCRIPTION |
+|-----------------|---------|-------------|
+| `/Q/health`     | `GET`  | Returns service status and active quantum backend |
+| `/Q/predict`    | `POST` | Accepts `[[features]]`, returns predictions + probabilities |
 
    
  
