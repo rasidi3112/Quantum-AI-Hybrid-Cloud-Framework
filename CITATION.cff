@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use Quantum-AI Hybrid Cloud Framework in your work, please cite it using the metadata below."
+title: "Quantum-AI Hybrid Cloud Framework"
+version: "1.0.0"
+authors:
+  - family-names: "Rasidi"
+    given-names: "Ahmad"
+    affiliation: "Independent Researcher / Quantum & AI"
+date-released: 2025-10-22
+url: "https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework"
+keywords:
+  - quantum computing
+  - quantum AI
+  - hybrid AI
+  - classical-quantum integration
+  - PyTorch
+  - PennyLane
+  - Qiskit
+  - deep learning
+  - machine learning
+  - variational circuits
+  - quantum algorithms
+  - quantum simulation
+  - QPU
+  - cloud quantum computing
+  - quantum neural networks
+  - quantum software
+  - AI framework
+  - computational science
+license: "MIT"
