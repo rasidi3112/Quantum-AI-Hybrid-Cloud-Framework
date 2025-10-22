@@ -156,7 +156,7 @@ PennyLane version: 0.35.1
 ##  Philosophy
 
 “Infrastructure should disappear.”  
-— Quantum-AI Hybrid Cloud Framework Design Principle   
+*— Quantum-AI Hybrid Cloud Framework Design Principle*   
 
  The utils/ module embodies invisible excellence: robust, unobtrusive tooling that enables researchers to focus on quantum innovation rather than engineering overhead.  
 
