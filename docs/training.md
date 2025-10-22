@@ -47,3 +47,41 @@ training/
 - Visualization: Generates interactive training_metrics.html
 - Export: Optional TorchScript/ONNX export for deployment
 
+---
+
+## input  
+- Tabular CSV dataset (e.g., examples/iris.csv) with label column
+- Configurable via CLI or programmatic TrainingConfig
+
+## Output (saved to runs/<experiment>/)
+```bash
+checkpoints/
+  ├── best.pt          # Best model by val accuracy
+  └── epoch_*.pt       # Per-epoch checkpoints
+metrics.json           # Full training history
+plots/
+  └── training_metrics.html  # Interactive Plotly dashboard
+model.ts               # TorchScript (optional)
+model.onnx             # ONNX (optional)
+training.log           # Structured logs
+```
+---
+## CLI Usage  
+```bash
+python -m training.train_hybrid \
+  --dataset examples/iris.csv \
+  --output runs/iris-hybrid \
+  --epochs 50 \
+  --batch-size 16 \
+  --learning-rate 1e-3 \
+  --quantum-layers 3 \
+  --backend default.qubit \
+  --device mps  # or --no-gpu --no-mps for CPU
+```
+
+2. hyperparameter_search.py — Automated Tuning  
+Purpose  
+Perform grid search over key hyperparameters:
+- Learning rate (--learning-rates)
+- Quantum circuit depth (--quantum-layers)
+- Quantum backend (--backends)
