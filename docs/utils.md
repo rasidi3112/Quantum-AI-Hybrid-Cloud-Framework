@@ -164,6 +164,10 @@ PennyLane version: 0.35.1
 
 
 
+Part of the [Quantum-AI Hybrid Cloud Framework](https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework)  
+GitHub Repository | Author: [Ahmad Rasidi](https://github.com/rasidi3112)
+
+
 
 
 
