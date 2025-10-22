@@ -120,7 +120,27 @@ Training Pipeline         |  Planned               | 90%+
 Deployment APIs           |  Planned               | 90%+
 Quantum Backend Fallback  |  Planned               | 100%
 
+*Note: Full test coverage will expand in future releases. Contributions welcome!*
+
+---
+
+## License 
+
+Test code is distributed under the MIT License, consistent with the rest of the framework.
+
+---
+
+## Philosophy
 
 
+*“If it’s not tested, it’s broken.”*  
+— Quantum-AI Hybrid Cloud Framework Testing Manifesto
+
+We believe that robust quantum software requires classical-grade testing discipline.
+These tests ensure that every commit maintains:
+
+• Architectural integrity  
+• Hardware portability  
+• Scientific reproducibility
 
 
