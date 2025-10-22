@@ -114,7 +114,8 @@ This module is ideal for:
 
 ## License
 
-All examples are distributed under the MIT License. The iris.csv dataset is in the public domain.  
+All examples are distributed under the [MIT License](https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework/blob/main/LICENSE).  
+The *iris.csv* dataset is in the public domain.
 
 ---
 
