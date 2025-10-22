@@ -85,3 +85,84 @@ Perform grid search over key hyperparameters:
 - Learning rate (--learning-rates)
 - Quantum circuit depth (--quantum-layers)
 - Quantum backend (--backends)
+
+  
+
+  ## Output Structure
+  ```bash
+  output_dir/
+  ├── lr0.001_layers2_backenddefault_qubit/
+  │   ├── metrics.json
+  │   └── checkpoints/best.pt
+  └── lr0.0005_layers3_backendibmq_qasm_simulator/
+      ├── metrics.json
+      └── checkpoints/best.pt
+  ```
+
+  
+  ## CLI Usage
+  ```bash
+  python -m training.hyperparameter_search \
+  --dataset examples/iris.csv \
+  --output hp_search/iris \
+  --learning-rates 1e-3 5e-4 \
+  --quantum-layers 2 3 \
+  --backends default.qubit ibmq_qasm_simulator
+  ```
+*⚠️ Note: For cloud QPUs (IBM, Rigetti), set environment variables (e.g., QAI_IBM_TOKEN) before running.*
+
+  ---
+
+  3. data.py — Dataset Utilities  
+     Supported Format  
+     - CSV with columns: feature_1, feature_2, ..., label  
+     - Stratified split: Ensures balanced train/validation sets  
+     - Auto-inference: Detects input_dim and n_classes from data
+    
+Configuration (DataConfig)  
+```bash
+@dataclass(frozen=True)
+class DataConfig:
+    dataset_path: Path
+    batch_size: int = 32
+    val_split: float = 0.2
+    shuffle: bool = True
+    seed: int = 42
+```
+Hardware & Reproducibility  
+| Feature              | Implementation                                   |
+|----------------------|--------------------------------------------------|
+| Device Selection     | Auto: MPS > CUDA > CPU                           |
+| Random Seeding       | Full stack (Python, NumPy, PyTorch)              |
+| Cloud QPU Fallback   | Local simulator if credentials missing           |
+| Apple Silicon (M1/M2)| Optimized via --use_mps (default: enabled)       |
+
+*Best Practice: Always specify --seed for reproducible results.*
+
+---
+
+ Integration with Full Framework  
+ The training/ module is the core engine of the framework and integrates seamlessly with:  
+ | Component   | Integration Point                                  |
+|--------------|----------------------------------------------------|
+| models/      | Instantiates HybridClassifier from config          |
+| utils/       | Logging, checkpointing, hardware, export           |
+| deployment/  | Trained .pt files served via FastAPI/Streamlit     |
+| tests/       | Validated via test_sanity.py                       |
+| examples/    | Uses iris.csv as default dataset                   |
+
+---
+## License
+Distributed under the MIT License. See LICENSE for details.  
+
+
+## Acknowledgements  
+This module leverages:
+
+- PyTorch for classical training loops and optimizers  
+- PennyLane for differentiable quantum circuits  
+- scikit-learn for stratified data splitting  
+- Plotly for interactive training visualizations  
+
+Designed for rigorous, reproducible quantum machine learning research at scale.  
+
