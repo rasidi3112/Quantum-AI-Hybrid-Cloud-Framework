@@ -148,7 +148,7 @@ This ensures every commit is production-deployable.
 
 ## Philosophy
 
-“Ship your quantum models like classical microservices.”
+“Ship your quantum models like classical microservices.”  
 *— Quantum-AI Hybrid Cloud Framework* 
 
  This Docker image bridges the gap between cutting-edge quantum research and enterprise-grade MLOps, enabling teams to deploy hybrid models with the same reliability as traditional AI services.
