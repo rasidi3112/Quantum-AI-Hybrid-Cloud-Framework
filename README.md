@@ -72,7 +72,7 @@ If you want to use the same project on another machine:
 
 4. Restore saved configurations and checkpoints (if you synced them via Git):
 ```bash
-   cp -r runs/ /path/to/new/environment/
+   cp -r runs/ /path/to/new/environment/ OR   cp -r runs/ /Users/macbook/Desktop/
 ```
 5. Ensure device compatibility:
 
