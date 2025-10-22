@@ -63,3 +63,51 @@ Output Format (best.pt)
 |------------|--------------------------------------------|---------------------------|
 | TorchScript | PyTorch production inference               | `--torchscript model.ts`  |
 | ONNX        | Cross-framework deployment (TensorRT, ONNX Runtime) | `--onnx model.onnx`       |
+
+Key Capabilities  
+
+- Dynamic batch support via dynamic_axes  
+- Signature-based reconstruction: rebuild model from checkpoint metadata  
+- Device-agnostic tracing (CPU/MPS/CUDA)
+
+  
+  CLI Usage
+  ```bash
+  python -m utils.export \
+  --checkpoint runs/iris/checkpoints/best.pt \
+  --torchscript exports/model.ts \
+  --onnx exports/model.onnx \
+  --device cpu
+  ```
+
+  ---
+
+3.hardware.py — Unified Hardware Abstraction  
+   Quantum Backend Resolution  
+   
+
+| Backend Type      | Environment Variable       | Fallback Behavior                 |
+|------------------|---------------------------|----------------------------------|
+| Local Simulator  | `QAI_DEFAULT_BACKEND`     | `default.qubit`                  |
+| IBM QPU          | `QAI_IBM_TOKEN`           | Local simulator if missing       |
+| Rigetti QVM      | (auto-detected)           | Local simulator if unavailable   |
+| D-Wave           | `QAI_DWAVE_KEY`           | Planned                          |
+
+
+   Hardware Summary  
+```bash
+=== Hardware Summary ===
+Platform: macOS 14.5
+Python: 3.11.9
+CPU cores: 8
+PyTorch threads: 8
+No CUDA GPU detected
+PennyLane version: 0.35.1
+========================
+```
+*"Auto-detection: Framework silently falls back to local simulator if cloud credentials are missing — ideal for CI/CD."*  
+
+
+
+
+   
