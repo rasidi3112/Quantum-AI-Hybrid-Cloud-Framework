@@ -120,6 +120,18 @@ PennyLane version: 0.35.1
 2025-10-15 14:32:10 | INFO | Epoch 2 metrics: {"train_loss": 0.58, "val_accuracy": 0.81}
 2025-10-15 14:33:15 | INFO | Epoch 3 metrics: {"train_loss": 0.55, "val_accuracy": 0.83}
 ```
+*"Enables reproducible research compliant with ML reproducibility checklists."*  
+
+---
+
+5. visualization.py — Interactive Training Analytics
+   Output: training_metrics.html  
+- Dual-axis plot: Loss (left) + Accuracy (right)  
+- Train/val comparison: Clear overfitting detection  
+- Plotly-powered: Zoom, pan, and export to PNG/SVG
+  
+
+
 
 
    
