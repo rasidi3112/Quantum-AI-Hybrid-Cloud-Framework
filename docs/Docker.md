@@ -131,3 +131,27 @@ spec:
 
 ---
 
+## Integration with CI/CD  
+The Docker image is automatically validated in .github/workflows/ci.yml:
+
+   - docker build succeeds  
+   - Container starts without error  
+   - /health endpoint returns 200 OK
+     
+This ensures every commit is production-deployable.
+
+
+
+---
+
+---
+
+## Philosophy
+
+“Ship your quantum models like classical microservices.”
+*— Quantum-AI Hybrid Cloud Framework* 
+
+ This Docker image bridges the gap between cutting-edge quantum research and enterprise-grade MLOps, enabling teams to deploy hybrid models with the same reliability as traditional AI services.
+
+
+ ---
