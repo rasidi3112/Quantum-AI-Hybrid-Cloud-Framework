@@ -129,7 +129,40 @@ PennyLane version: 0.35.1
 - Dual-axis plot: Loss (left) + Accuracy (right)  
 - Train/val comparison: Clear overfitting detection  
 - Plotly-powered: Zoom, pan, and export to PNG/SVG
-  
+
+![Training Metrics Screenshot](docs/assets/training_metrics.png)  
+
+   "*Zero external dependencies: Self-contained HTML file viewable in any browser.*"  
+
+   ---
+## Integration Across the Framework  
+
+
+| Component       | Uses / Utils For                                   |
+|-----------------|---------------------------------------------------|
+| `training/`     | Checkpointing, logging, hardware detection, visualization |
+| `deployment/`   | Model loading from checkpoints                    |
+| `qml_app.export`| TorchScript / ONNX serialization                 |
+| `tests/`        | Reproducible hardware environment                |
+
+
+  ---
+  ## License  
+
+
+
+
+
+##  Philosophy
+
+“Infrastructure should disappear.”  
+— Quantum-AI Hybrid Cloud Framework Design Principle   
+
+ The utils/ module embodies invisible excellence: robust, unobtrusive tooling that enables researchers to focus on quantum innovation rather than engineering overhead.  
+
+ ---
+
+
 
 
 
