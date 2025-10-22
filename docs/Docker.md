@@ -144,6 +144,12 @@ This ensures every commit is production-deployable.
 
 ---
 
+
+## License
+
+Test code is distributed under the [MIT License](https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework/blob/main/LICENSE), consistent with the rest of the framework.
+
+
 ---
 
 ## Philosophy
@@ -155,3 +161,7 @@ This ensures every commit is production-deployable.
 
 
  ---
+
+
+ Part of the [Quantum-AI Hybrid Cloud Framework]  (https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework)   
+GitHub Repository | Author: [Ahmad Rasidi](https://github.com/rasidi3112)
