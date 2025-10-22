@@ -96,3 +96,38 @@ docker run -it -p 8000:8000 \
   --model-path ... \
   --backend ibmq_qasm_simulator
 ```
+"*Security Note: Never hardcode secrets in the image. Always use runtime injection.*"  
+
+## Kubernetes / Helm  
+Compatible with standard Kubernetes deployments:
+```bash
+apiVersion: apps/v1
+kind: Deployment
+spec:
+  template:
+    spec:
+      containers:
+      - name: quantum-ai
+        image: quantum-ai-hybrid:latest
+        ports:
+        - containerPort: 8000
+        envFrom:
+        - secretRef:
+            name: quantum-credentials
+        args: ["--model-path", "/models/best.pt", "--device", "cpu"]
+```
+## Image Specifications
+| Property           | Value                                                                 |
+|-------------------|-----------------------------------------------------------------------|
+| Base Image         | `python:3.11-slim`                                                    |
+| Exposed Port       | 8000 (FastAPI)                                                        |
+| Default Command    | `python -m deployment.api`                                            |
+| Supported Backends | `default.qubit`, IBM QPU, Rigetti QVM (with credentials)             |
+| Hardware Support   | CPU only (cloud QPUs via remote execution)                            |
+| Image Size         | ~280 MB (compressed)                                                  |
+
+  
+  "*Note: GPU (CUDA) and MPS (Apple Silicon) are not supported in Docker by default. For GPU inference, use native deployment or NVIDIA Container Toolkit.*" 
+
+---
+
