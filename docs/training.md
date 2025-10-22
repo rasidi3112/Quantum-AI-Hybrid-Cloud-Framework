@@ -153,8 +153,7 @@ Hardware & Reproducibility
 
 ---
 ## License
-Distributed under the MIT License. See LICENSE for details.  
-
+Distributed under the [MIT License](https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework/blob/main/LICENSE). See the link for details.
 
 ## Acknowledgements  
 This module leverages:
@@ -165,4 +164,12 @@ This module leverages:
 - Plotly for interactive training visualizations  
 
 Designed for rigorous, reproducible quantum machine learning research at scale.  
+
+
+---
+
+Part of the [Quantum-AI Hybrid Cloud Framework](https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework)  
+GitHub Repository | Author: [Ahmad Rasidi](https://github.com/rasidi3112)
+
+
 
