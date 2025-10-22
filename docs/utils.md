@@ -43,3 +43,23 @@ utils/
 - Best-model tracking based on validation metrics  
 - Full state saving: model weights, optimizer state, config, and metrics  
 
+Output Format (best.pt) 
+```bash
+{
+  "model_state": {...},      # HybridClassifier state_dict
+  "metrics": {...},          # Final val accuracy, loss, etc.
+  "signature": {...}         # Model architecture blueprint
+}
+```
+*"Enables exact model reconstruction without original config files."*
+
+---
+
+2. export.py — Deployment-Ready Model Serialization  
+   Supported Formats
+   
+
+| Format      | Use Case                                    | CLI Command                |
+|------------|--------------------------------------------|---------------------------|
+| TorchScript | PyTorch production inference               | `--torchscript model.ts`  |
+| ONNX        | Cross-framework deployment (TensorRT, ONNX Runtime) | `--onnx model.onnx`       |
