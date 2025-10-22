@@ -2,6 +2,12 @@
 Quantum-AI Hybrid Cloud Framework
 Enterprise-Ready Inference, API, and Visualization for Hybrid Quantum-Classical Models
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework/blob/main/LICENSE)
+![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?logo=fastapi)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit)
+
+
 ## Overview
 
 The deployment/ module provides production-grade tooling for serving, monitoring, and interacting with trained hybrid quantum-classical models. It enables:
@@ -128,7 +134,9 @@ Prerequisites
 ---
 
 ## License  
-Distributed under the [MIT License](./LICENSE). See the [`LICENSE`](./LICENSE) file in the root directory for details.
+Distributed under the [MIT License](https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework/blob/main/LICENSE).  
+See the [`LICENSE`](https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework/blob/main/LICENSE) file in the root directory for details.
+
 
 ---
 
