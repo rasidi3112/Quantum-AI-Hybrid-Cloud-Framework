@@ -107,7 +107,19 @@ PennyLane version: 0.35.1
 ```
 *"Auto-detection: Framework silently falls back to local simulator if cloud credentials are missing — ideal for CI/CD."*  
 
+4. logging_utils.py — Structured Experiment Tracking
+   Features:
+   - Dual-channel logging: console + file (training.log)  
+   - ISO 8601 timestamps for auditability  
+   - JSON metric persistence (metrics.json) for programmatic analysis
 
+   Log Format:
+```bash
+2025-10-15 14:30:22 | INFO | Starting training with configuration: {...}
+2025-10-15 14:31:05 | INFO | Epoch 1 metrics: {"train_loss": 0.62, "val_accuracy": 0.78}
+2025-10-15 14:32:10 | INFO | Epoch 2 metrics: {"train_loss": 0.58, "val_accuracy": 0.81}
+2025-10-15 14:33:15 | INFO | Epoch 3 metrics: {"train_loss": 0.55, "val_accuracy": 0.83}
+```
 
 
    
