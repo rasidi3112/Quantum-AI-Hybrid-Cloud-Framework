@@ -141,6 +141,13 @@ These tests ensure that every commit maintains:
 
 • Architectural integrity  
 • Hardware portability  
-• Scientific reproducibility
+• Scientific reproducibility  
+
+---
+
+
+Part of the [Quantum-AI Hybrid Cloud Framework]  (https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework)   
+GitHub Repository | Author: [Ahmad Rasidi](https://github.com/rasidi3112)  
+
 
 
