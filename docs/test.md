@@ -124,9 +124,10 @@ Quantum Backend Fallback  |  Planned               | 100%
 
 ---
 
-## License 
+## License
 
-Test code is distributed under the MIT License, consistent with the rest of the framework.
+Test code is distributed under the [MIT License](https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework/blob/main/LICENSE), consistent with the rest of the framework.
+
 
 ---
 
