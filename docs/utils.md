@@ -148,6 +148,8 @@ PennyLane version: 0.35.1
 
   ---
   ## License  
+Test code is distributed under the [MIT License](https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework/blob/main/LICENSE), consistent with the rest of the framework.
+
 
 
 
