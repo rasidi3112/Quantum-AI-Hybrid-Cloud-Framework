@@ -180,7 +180,8 @@ Models in this module support:
  - Validated on macOS (M1), Linux (CUDA), and Windows (CPU)
 
 ## License  
-Distributed under the [MIT License](./LICENSE). See the [`LICENSE`](./LICENSE) file in the root directory for details.   
+Distributed under the [MIT License](https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework/blob/main/LICENSE).  
+See the [`LICENSE`](https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework/blob/main/LICENSE) file in the root directory for details.
 
 ## Acknowledgements  
 
