@@ -148,10 +148,9 @@ python -m qml_app.main train \
 ```
 ## 4. Evaluation and Inference
 ```bash
-   python -m qml_app.main evaluate \
-    --model hybrid \
-    --config config/default.yaml \
-    --checkpoint runs/iris/checkpoints/best.pt
+  python -m training.train_hybrid evaluate \
+    --checkpoint runs/iris-hybrid/checkpoints/best.pt \
+    --dataset examples/iris.csv
 ```
 The evaluation script automatically detects available devices and logs performance metrics to runs/<experiment>/metrics.json.
 
