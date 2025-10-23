@@ -157,10 +157,11 @@ The evaluation script automatically detects available devices and logs performan
 ## 5. Deployment (FastAPI & Streamlit) 
    FastAPI REST Service
    ```bash
-python -m qml_app.main serve \
-    --model-path runs/iris/checkpoints/best.pt \
+python -m deployment.api \
+    --model-path runs/iris-hybrid/checkpoints/best.pt \
     --device cpu \
-    --host 0.0.0.0 --port 8000
+    --host 0.0.0.0 \
+    --port 8000
 ```
    Endpoints:
    -GET /health → { "status": "ok", "backend": "default.qubit" }
