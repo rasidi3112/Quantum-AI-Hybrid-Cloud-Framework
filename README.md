@@ -1,7 +1,8 @@
 
-# Quantum-AI Hybrid Cloud Framework
+# Quantum-AI Hybrid Cloud Framework  
 
-**Quantum-AI Hybrid Cloud Framework** is a cutting-edge modular platform for **hybrid classical–quantum AI** development, training, and deployment. It seamlessly integrates **PyTorch** for classical neural networks with **PennyLane/Qiskit** for quantum layers, supporting **local simulators** as well as **cloud QPUs** (IBM, Rigetti, D-Wave). Fully **cross-platform** (macOS, Linux, Windows), it is designed for reproducible research, experimentation, and enterprise applications.
+Quantum-AI Hybrid Cloud Framework is an open-source, modular platform for training and deploying hybrid classical–quantum AI models across CPU, GPU, and QPU environments. Built with PyTorch, PennyLane, and Qiskit, it enables reproducible research and enterprise-ready workflows—from local simulation to cloud quantum hardware (IBM, Rigetti, D-Wave). Fully cross-platform (macOS, Linux, Windows) and optimized for Apple Silicon (MPS), it bridges quantum computing and classical deep learning in a production-grade ecosystem. 
+
 
 [![Python](https://img.shields.io/badge/python-3.11-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.1-orange?logo=pytorch&logoColor=white)](https://pytorch.org/)
@@ -15,54 +16,40 @@
 
 ## Key Features
 
-- **Hybrid Modeling**  
-  Combines classical neural networks with parametrized quantum circuits, enabling flexible and modular hybrid architectures.
-
-- **Cross-Device Compatibility**  
-  Runs on CPUs, GPUs, Apple M-series (MPS), and cloud QPUs for maximum portability.
-
-- **Backend Auto-Detection**  
-  Automatically selects the optimal computation device (CPU, CUDA, MPS, or QPU) based on hardware availability.
-
-- **Configurable Pipelines**  
-  Supports modular configuration via **YAML** or **CLI**, enabling easy hyperparameter tuning and experiment reproducibility.
-
-- **Deployment-Ready**  
-  Provides **FastAPI endpoints** for hybrid model inference and **Streamlit dashboards** for real-time monitoring of training and quantum layers.
-
-- **Integrated Logging & Checkpointing**  
-  Saves models, metrics, and artifacts automatically to ensure reproducibility and version tracking.
-
-- **Continuous Integration Support**  
-  Preconfigured for **GitHub Actions**, Docker, and automated testing workflows.
-
-- **Visualization Tools**  
-  Includes **Bloch Sphere visualizations** to inspect quantum states and debug hybrid models interactively.
+  - Hybrid Quantum-Classical Models  
+  End-to-end architectures combining classical MLPs with variational quantum circuits (StronglyEntanglingLayers + AngleEmbedding).
+  - Universal Hardware Support  
+  Auto-detects and runs on CPU, CUDA, Apple MPS, and cloud QPUs—with fallback to local simulators if credentials are missing.
+  - Reproducible Experimentation  
+  Full random seeding, YAML/CLI configuration, automatic checkpointing, and metric logging (metrics.json).
+  - Production-Ready Deployment  
+    -  FastAPI REST service (/predict, /health)  
+    -  Streamlit dashboard with training metrics, inference playground, and Bloch Sphere visualizer  
+   - Model Portability
+  Export trained models to TorchScript or ONNX for integration into external systems.
+  - Automated CI/CD  
+  Validated via GitHub Actions: linting (ruff), unit tests (pytest), and Docker build.
+  - Cloud QPU Integration  
+  Connect to IBM Quantum, Rigetti, or D-Wave via environment variables—no code changes needed.
 
 ---
 
 ## Supported Workflows
 
-1. **Hybrid Training Loop**  
-   Training orchestrates classical and quantum components with configurable loss, optimizer, and learning rate schedules.
-
-2. **Inference Service**  
-   Provides a reusable `HybridInferenceService` for loading checkpoints and running predictions with probability outputs.
-
-3. **Hyperparameter Search**  
-   Supports systematic grid search across learning rates, quantum layers, and backends, ensuring optimized performance.
-
-4. **Data Loading & Preprocessing**  
-   Handles tabular datasets (CSV) with train/validation splits, batching, and automatic class detection.
-
-5. **Model Export**  
-   Supports **ONNX** and **TorchScript** export for production deployment.
+| Workflow              | Tools / Script                    | Output                                                                 |
+|-----------------------|----------------------------------|------------------------------------------------------------------------|
+| Training              | `training/train_hybrid.py`       | `runs/<exp>/checkpoints/best.pt`, `metrics.json`, `training_metrics.html` |
+| Hyperparameter Search  | Grid over LR, layers, backends   | Per-run directories with metrics                                        |
+| Evaluation            | CLI + config                     | Accuracy, F1, confusion matrices                                       |
+| Inference             | `deployment/api.py`              | REST API with probabilities & backend info                              |
+| Visualization         | `deployment/dashboard.py`        | Interactive loss/accuracy plots + quantum state inspection             |
+| Export                | `utils/export.py`                | `model.ts`, `model.onnx`                                               |
 
 ---
 
 ## Purpose
 
-This framework provides a **professional, reproducible hybrid AI ecosystem** for integration into **research or industry projects**, bridging **quantum computing** with **classical deep learning** and enabling next-generation AI workflows.
+This framework empowers researchers, educators, and engineers to build, validate, and deploy hybrid quantum-classical AI systems with the rigor of modern MLOps—enabling international collaboration, hardware-aware experimentation, and real-world quantum advantage exploration.
 
 ---
 
