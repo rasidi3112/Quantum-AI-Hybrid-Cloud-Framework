@@ -60,18 +60,24 @@ This framework empowers researchers, educators, and engineers to build, validate
 git clone https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework.git
 cd Quantum-AI-Hybrid-Cloud-Framework
 
-# Create a new Python virtual environment
+# Create a virtual environment
 python -m venv .venv
-source .venv/bin/activate   # macOS/Linux
-.venv\Scripts\activate      # Windows
+
+# Activate it
+source .venv/bin/activate      # macOS / Linux
+# OR
+.venv\Scripts\activate         # Windows
 
 # Install dependencies
+pip install --upgrade pip
 pip install -r requirements.txt
 
 # Optional: verify installation
 pytest
 
 ```
+Requirement: Python ≥ 3.11  
+"*Tip: Use pyenv or conda if managing multiple Python versions.*"
 
 ## 2. Running on Another Laptop or Device
 If you want to use the same project on another machine:
@@ -92,15 +98,18 @@ If you want to use the same project on another machine:
    ```
 
 4. Restore saved configurations and checkpoints (if you synced them via Git):
-```bash
-   cp -r runs/ /path/to/new/environment/ OR   cp -r runs/ /Users/macbook/Desktop/
-```
+  ```bash
+     cp -r runs/ /path/to/new/environment/ OR   cp -r runs/ /Users/macbook/Desktop/
+  ```
 5. Ensure device compatibility:
+       
+      | Platform                | Recommended --device |
+    |-------------------------|-------------------|
+    | macOS (Apple Silicon)   | mps               |
+    | Windows/Linux (CPU)     | cpu               |
+    | NVIDIA GPU              | cuda              |
 
-  - macOS (M1/M2 / Apple silicon ): use --device mps
-  - Windows/Linux (CPU): use --device cpu
-  - GPU (NVIDIA): use --device cuda
-
+ 
 6. Confirm reproducibility:
    ```bash
    python training/train_hybrid.py --model vqc --config config/default.yaml
