@@ -287,10 +287,11 @@ The framework automatically falls back to the local simulator if credentials are
    ---
 
 
-   ### Notes
-    This repository is under active development.
-    Some modules may still produce unstable results on QPU backends due to noise or interface updates in PennyLane/Qiskit.
-    We welcome pull requests and issue reports.
+   ### Notes  
+   
+    This repository is under active development.  
+    Some modules may still produce unstable results on QPU backends due to noise or interface updates in PennyLane/Qiskit.  
+    We welcome pull requests and issue reports.  
     
     
       
