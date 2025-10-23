@@ -213,15 +213,15 @@ This dashboard provides:
   
 ## 6. Export and Integration
  ```bash
-   # Export to TorchScript
-   python -m qml_app.export \
-     --checkpoint runs/iris/checkpoints/best.pt \
-     --torchscript exports/model.pt
-   
-   # Export to ONNX
-   python -m qml_app.export \
-     --checkpoint runs/iris/checkpoints/best.pt \
-     --onnx exports/model.onnx
+   # Export to TorchScript (PyTorch ecosystem)
+python -m utils.export \
+    --checkpoint runs/iris-hybrid/checkpoints/best.pt \
+    --torchscript exports/model.ts
+
+# Export to ONNX (TensorRT, ONNX Runtime, etc.)
+python -m utils.export \
+    --checkpoint runs/iris-hybrid/checkpoints/best.pt \
+    --onnx exports/model.onnx
 ```
   These exported models can be used for deployment in other frameworks or cloud environments.
 
