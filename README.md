@@ -281,6 +281,16 @@ The framework automatically falls back to the local simulator if credentials are
 - For Apple Silicon users, prefer --device mps over CPU for optimal performance.
 
 ## 12. License
-   This project is licensed under the MIT License, allowing modification and commercial use with proper attribution.
+   This project is licensed under the MIT License, allowing modification and commercial use with proper attribution.  
 
-  
+
+   ---
+
+
+   ### Notes
+    This repository is under active development.
+    Some modules may still produce unstable results on QPU backends due to noise or interface updates in PennyLane/Qiskit.
+    We welcome pull requests and issue reports.
+    
+    
+      
