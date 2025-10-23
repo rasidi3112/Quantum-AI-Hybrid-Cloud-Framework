@@ -130,7 +130,7 @@ PennyLane version: 0.35.1
 - Train/val comparison: Clear overfitting detection  
 - Plotly-powered: Zoom, pan, and export to PNG/SVG
 
-![Training Metrics Screenshot](docs/assets/training_metrics.png)  
+![Training Metrics Screenshot](assets/training_metrics.png)  
 
    "*Zero external dependencies: Self-contained HTML file viewable in any browser.*"  
 
