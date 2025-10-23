@@ -225,15 +225,19 @@ python -m utils.export \
 ```
   These exported models can be used for deployment in other frameworks or cloud environments.
 
-  ## 7. Docker Support
+  ## 7. Docker (Universal Runtime)
   ```bash
-   # Build the container
-   docker build -t quantum-ai-hybrid .
-   
-   # Run the container
-   docker run -it -p 8000:8000 quantum-ai-hybrid
+   # Build
+docker build -t quantum-ai-hybrid .
 
-The Docker image ensures consistent runtime environments across machines.
+# Run (mount checkpoints if needed)
+docker run -it -p 8000:8000 \
+  -v $(pwd)/runs:/app/runs \
+  quantum-ai-hybrid \
+  --model-path runs/iris-hybrid/checkpoints/best.pt \
+  --device cpu
+
+ "Ideal for: Cloud deployment, CI/CD, and environment isolation." 
 ```
  ## 8. GitHub Actions are configured for:
 - Linting (flake8)
