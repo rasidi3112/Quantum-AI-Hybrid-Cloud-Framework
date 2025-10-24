@@ -141,14 +141,83 @@ Example output:
 
 To train on a QPU:
 ```bash
+# 1. Set your IBM Quantum API token (required for cloud access)
+export QAI_IBM_TOKEN="your_actual_ibm_quantum_token"
+
+# 2. Run training with a real QPU backend (e.g., ibmq_manila)
 python training/train_hybrid.py \
   --dataset examples/iris.csv \
-  --output runs/ibm-test \
-  --backend ibmq_qasm_simulator \
+  --output runs/qpu-test \
+  --backend ibmq_manila \
   --device cpu \
-  --epochs 10 \
-  --batch-size 16
+  --epochs 5 \
+  --batch-size 8 \
+  --shots 1024
 ```
+"*Note: Replace ibmq_manila with any IBM QPU you have access to (e.g., ibmq_lagos, ibmq_quito).*"    
+Use --device cpu because quantum execution happens remotely; the classical part runs on your local CPU.  
+
+1. Backend Resolution in utils/hardware.py
+   Your code explicitly handles IBM backends:
+   ```bash
+   elif backend_lower.startswith("ibm"):
+    token = os.getenv("QAI_IBM_TOKEN")
+    if token:
+        service = QiskitRuntimeService(channel="cloud", token=token)
+        device = qml.device("qiskit.ibmq", wires=n_wires, backend=backend_name, shots=shots or 1024, service=service)
+        info = QuantumBackendInfo(name=backend_name, is_hardware=True, provider="IBM", shots=shots or 1024)
+        return device, info
+    else:
+        # Fallback to local simulator
+        device = qml.device("default.qubit", wires=n_wires, shots=shots)
+   ```
+   This confirms:
+
+    - The framework reads QAI_IBM_TOKEN from environment variables.  
+    - If the token exists and the backend name starts with "ibm", it connects to real IBM hardware or simulators via Qiskit Runtime.  
+    - If no token, it safely falls back to default.qubit.
+      
+ 2. CLI Argument Parsing in training/train_hybrid.py
+      The --backend argument is directly passed to TrainingConfig, which is used in QuantumLayerConfig:
+    ```bash
+    quantum_config = QuantumLayerConfig(
+    n_qubits=classical_config.output_dim,
+    n_layers=config.quantum_layers,
+    backend=config.backend,      # ← comes from --backend
+    shots=config.shots,)
+     ```
+3. No --use-qpu Flag Exists  
+   Your code does not use a --use-qpu True flag. This is a legacy artifact from documentation or another project (e.g., Quantum-Machine-Learning).  
+→ Remove --use-qpu True — it will cause an "unrecognized argument" error.
+
+Valid Backend Examples:  
+
+
+| Backend Type        | Command Example             | Notes |
+|----------------------|-----------------------------|-------|
+| IBM Quantum Simulator | `--backend ibmq_qasm_simulator` | Fast, no queue, good for testing |
+| IBM Real QPU          | `--backend ibmq_manila`         | Requires active IBM account and access |
+| Local Simulator       | `--backend default.qubit`       | No token needed, runs offline |
+
+"*Important: Real QPUs often have long queue times and limited availability. Start with ibmq_qasm_simulator for validation.*"
+
+Summary: What You Should Use  
+  For IBM Quantum Simulator (recommended for testing):  
+  ```bash
+    export QAI_IBM_TOKEN="your_token"
+python training/train_hybrid.py --dataset examples/iris.csv --backend ibmq_qasm_simulator --device cpu --epochs 10
+```
+  For Real IBM QPU (if you have access):  
+  ```bash
+    export QAI_IBM_TOKEN="your_token"
+python training/train_hybrid.py --dataset examples/iris.csv --backend ibmq_manila --device cpu --epochs 5 --shots 8192
+```
+  For Local Simulation (no token needed):  
+  ```bash
+    python training/train_hybrid.py --dataset examples/iris.csv --backend default.qubit --device cpu --epochs 10
+```
+
+
 ## 4. Evaluation and Inference
 ```bash
   python -m training.train_hybrid evaluate \
