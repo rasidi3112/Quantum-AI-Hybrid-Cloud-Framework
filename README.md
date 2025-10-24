@@ -141,10 +141,13 @@ Example output:
 
 To train on a QPU:
 ```bash
-python -m qml_app.main train \
-    --model hybrid \
-    --backend ibmq_qasm_simulator \
-    --use-qpu True
+python training/train_hybrid.py \
+  --dataset examples/iris.csv \
+  --output runs/ibm-test \
+  --backend ibmq_qasm_simulator \
+  --device cpu \
+  --epochs 10 \
+  --batch-size 16
 ```
 ## 4. Evaluation and Inference
 ```bash
