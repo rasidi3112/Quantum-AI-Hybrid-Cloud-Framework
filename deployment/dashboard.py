@@ -7,10 +7,10 @@ import sys
 from pathlib import Path
 from typing import Dict, List
 
-import numpy as np
-import plotly.graph_objects as go
-import streamlit as st
-import torch
+import numpy as np # type: ignore
+import plotly.graph_objects as go # type: ignore
+import streamlit as st # type: ignore
+import torch # type: ignore
 
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
