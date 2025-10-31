@@ -140,6 +140,16 @@ python -m training.train_hybrid \
        --batch-size 16 \
        --device cpu
 ```
+OR
+```bash
+python -m training.train_hybrid \
+  --dataset examples/iris.csv \
+  --output outputs/vqc_iris_long/ \
+  --backend default.qubit \
+  --epochs 50 \
+  --batch-size 16 \
+  --no-mps
+```
 Output:
 - runs/<experiment_name>/checkpoints/best.pt
 - runs/<experiment_name>/metrics.json
