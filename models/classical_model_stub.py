@@ -6,7 +6,7 @@ class ClassicalFeatureExtractor:
         self.config = config
 
     def forward(self, x):
-        # kembalikan tensor dummy dengan dimensi output sesuai config
+       #return a dummy tensor with output dimensions according to the config
         import torch # type: ignore
         batch_size = x.shape[0]
         output_dim = self.config.output_dim
