@@ -110,10 +110,25 @@ If you want to use the same project on another machine:
     | NVIDIA GPU              | cuda              |
 
  
-6. Confirm reproducibility:
-   ```bash
-   python training/train_hybrid.py --model vqc --config config/default.yaml
-``
+6. Confirm Reproducibility  
+Run the following commands to verify that the training process is reproducible (i.e., produces the same results when using the same random seed).
+```bash
+python -m training.train_hybrid \
+  --dataset examples/iris.csv \
+  --output outputs/vqc_iris/ \
+  --no-mps
+```
+Then, repeat the experiment with the same configuration and a fixed seed:  
+```bash
+python -m training.train_hybrid \
+  --dataset examples/iris.csv \
+  --output outputs/vqc_iris_repeat/ \
+  --no-mps \
+  --seed 42
+```
+
+
+
 
 ## 3. Quick Start Training
  ```bash
