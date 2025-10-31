@@ -2,7 +2,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Tuple
-import torch
+import torch # type: ignore
 from models import (
     ClassicalModelConfig,
     HybridClassifier,
@@ -10,7 +10,7 @@ from models import (
     QuantumLayerConfig,
 )
 from utils.hardware import QuantumBackendInfo
-import pennylane as qml
+import pennylane as qml # type: ignore
 
 
 @dataclass
