@@ -113,18 +113,12 @@ If you want to use the same project on another machine:
 6. Confirm Reproducibility  
 Run the following commands to verify that the training process is reproducible (i.e., produces the same results when using the same random seed).
 ```bash
-python -m training.train_hybrid \
-  --dataset examples/iris.csv \
-  --output outputs/vqc_iris/ \
-  --no-mps
+python -m training.train_hybrid --dataset examples/iris.csv --output outputs/vqc_iris/ --no-mps
+
 ```
 Then, repeat the experiment with the same configuration and a fixed seed:  
 ```bash
-python -m training.train_hybrid \
-  --dataset examples/iris.csv \
-  --output outputs/vqc_iris_repeat/ \
-  --no-mps \
-  --seed 42
+python -m training.train_hybrid --dataset examples/iris.csv --output outputs/vqc_iris_repeat/ --no-mps --seed 42
 ```
 
 
