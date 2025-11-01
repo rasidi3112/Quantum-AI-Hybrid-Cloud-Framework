@@ -151,7 +151,7 @@ This pipeline ensures that the framework remains **stable**, **trustworthy**, an
 ---
 
 > 🌍 *Part of the Quantum-AI Hybrid Cloud Framework*  
-> [GitHub Repository](https://github.com/USERNAME/Quantum-AI-Hybrid-Cloud-Framework) | [Author: Ahmad Rasidi](https://github.com/USERNAME)
+> [GitHub Repository](https://github.com/rasidi3112/Quantum-AI-Hybrid-Cloud-Framework) | [Author: Ahmad Rasidi](https://github.com/rasidi3112)
 
  
 
