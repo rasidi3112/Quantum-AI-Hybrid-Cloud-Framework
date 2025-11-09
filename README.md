@@ -49,7 +49,7 @@ Quantum AI Hybrid Cloud Framework is an open-source, modular platform for traini
 
 ## Purpose
 
-This framework empowers researchers, educators, and engineers to build, validate, and deploy hybrid quantum-classical AI systems with the rigor of modern MLOps—enabling international collaboration, hardware-aware experimentation, and real-world quantum advantage exploration.
+This framework empowers researchers, educators, and engineers to build, validate, and deploy hybrid quantum-classical AI systems with the rigor of modern MLOps—enabling international collaboration, hardware aware experimentation, and real-world quantum advantage exploration.
 
 ---
 
