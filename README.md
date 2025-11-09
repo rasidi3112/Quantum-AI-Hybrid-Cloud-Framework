@@ -30,7 +30,7 @@ Quantum AI Hybrid Cloud Framework is an open-source, modular platform for traini
   - Automated CI/CD  
   Validated via GitHub Actions: linting (ruff), unit tests (pytest), and Docker build.
   - Cloud QPU Integration  
-  Connect to IBM Quantum, Rigetti, or D-Wave via environment variables—no code changes needed.
+  Connect to IBM Quantum, Rigetti, or D-Wave via environment variables no code changes needed.
 
 ---
 
