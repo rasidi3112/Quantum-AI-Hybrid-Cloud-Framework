@@ -1,7 +1,7 @@
 
 # Quantum-AI Hybrid Cloud Framework  
 
-Quantum-AI Hybrid Cloud Framework is an open-source, modular platform for training and deploying hybrid classical–quantum AI models across CPU, GPU, and QPU environments. Built with PyTorch, PennyLane, and Qiskit, it enables reproducible research and enterprise-ready workflows—from local simulation to cloud quantum hardware (IBM, Rigetti, D-Wave). Fully cross-platform (macOS, Linux, Windows) and optimized for Apple Silicon (MPS), it bridges quantum computing and classical deep learning in a production-grade ecosystem. 
+Quantum AI Hybrid Cloud Framework is an open-source, modular platform for training and deploying hybrid classical quantum AI models across CPU, GPU, and QPU environments. Built with PyTorch, PennyLane, and Qiskit, it enables reproducible research and enterprise ready workflows—from local simulation to cloud quantum hardware (IBM, Rigetti, D-Wave). Fully cross-platform (macOS, Linux, Windows) and optimized for Apple Silicon (MPS), it bridges quantum computing and classical deep learning in a production-grade ecosystem. 
 
 
 [![Python](https://img.shields.io/badge/python-3.11-blue?logo=python&logoColor=white)](https://www.python.org/)
